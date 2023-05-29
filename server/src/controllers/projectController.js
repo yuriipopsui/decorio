@@ -5,7 +5,7 @@ exports.getAllProjects = async (req, res, next) => {
 }
 
 exports.getProjectById = async (req, res, next) => {
-  res.json(await project.findById(req.params.id))
+  res.json(await project.findById(req.params.id));
 };
 
 exports.deleteProjectById = async (req, res, next) => {
@@ -15,8 +15,8 @@ exports.deleteProjectById = async (req, res, next) => {
 }
 
 exports.createProject = async (req, res, next) => {
-  const projectData = req.body
+  const projectData = req.body;
 
-  const newProject = await project.create(projectData)
-  res.json(newProject)
+  const newProject = await project.create(projectData);
+  res.json(newProject);
 }
