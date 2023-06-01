@@ -1,0 +1,16 @@
+.button {
+  margin: 3px auto;
+  font-size: 20px;
+  padding: 7px;
+  background-color: #bfc6ec;
+  border-radius: 5px;
+  border: transparent;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 3px 7px #2563a4;
+  }
+
+}

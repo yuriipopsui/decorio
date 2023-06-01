@@ -1,0 +1,21 @@
+.objectForm{
+
+  &__input {
+    width: 30vw;
+    background-color: antiquewhite;
+    border: transparent 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #2563a4;
+}
+
+  &__inputField{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
