@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styles from "./CreateObjectForm.module.scss";
-import { useForm } from "react-hook-form";
-import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+// import { useForm } from "react-hook-form";
+// import * as Yup from "yup";
+// import { yupResolver } from "@hookform/resolvers/yup";
 import Button from "../Button/Button";
-import InputFieldWithLabel from "../InputFieldWithLabel/InputFieldWithLabel";
+import InputField from "../InputField/InputField";
 
 const CreateObjectForm = () => {
   const [newObject, setNewObject] = useState({});
@@ -21,16 +21,15 @@ const CreateObjectForm = () => {
   return (
     <>
       <form className={styles.objectForm} action="">
-        <InputFieldWithLabel />
       <div className={styles.objectForm__inputFieldHeader}>
-        <input
+        <InputField
           className={styles.objectForm__input}
           type="text"
           name="date"
           placeholder="Input date"
           onChange={onChangeHandler}
         />
-        <input
+        <InputField
           className={styles.objectForm__input}
           type="text"
           name="name"
@@ -41,8 +40,9 @@ const CreateObjectForm = () => {
         <fieldset className={styles.objectForm__fieldset}>
           <legend>Consumer:</legend>
           <div className={styles.objectForm__inputField}>
-            <label htmlFor="consumerName">Name: </label>
-            <input
+            {/* <label htmlFor="consumerName">Name: </label> */}
+            <InputField
+              labelTitle="Name"
               className={styles.objectForm__input}
               type="text"
               name="consumerName"
@@ -52,9 +52,10 @@ const CreateObjectForm = () => {
           </div>
           <div className={styles.objectForm__inputFieldDouble}>
             <div className={styles.objectForm__inputField}>
-              <label htmlFor="consumerPhone">Phone: </label>
-              <input
+              {/* <label htmlFor="consumerPhone">Phone: </label> */}
+              <InputField
                 className={styles.objectForm__input}
+                labelTitle="Phone"
                 type="text"
                 name="consumerPhone"
                 placeholder="Input Consumer Phone"
@@ -62,10 +63,11 @@ const CreateObjectForm = () => {
               />
             </div>
             <div className={styles.objectForm__inputField}>
-              <label htmlFor="consumerInfo">Comment: </label>
-              <input
+              {/* <label htmlFor="consumerInfo">Comment: </label> */}
+              <InputField
+                labelTitle="Comment"
                 className={styles.objectForm__input}
-                type="text"
+                type="textaria"
                 name="consumerInfo"
                 placeholder="Input some Information"
                 onChange={onChangeHandler}
@@ -77,9 +79,10 @@ const CreateObjectForm = () => {
           <legend>About Order:</legend>
           <div className={styles.objectForm__inputFieldDouble}>
             <div className={styles.objectForm__inputField}>
-              <label htmlFor="decorationType">Type of decor: </label>
-              <input
+              {/* <label htmlFor="decorationType">Type of decor: </label> */}
+              <InputField
                 className={styles.objectForm__input}
+                labelTitle="Type ofDecor"
                 type="text"
                 name="decorationType"
                 placeholder="Input Type of decoration"
@@ -87,9 +90,10 @@ const CreateObjectForm = () => {
               />
             </div>
             <div className={styles.objectForm__inputField}>
-              <label htmlFor="selectedColor">Selected Color: </label>
-              <input
+              {/* <label htmlFor="selectedColor">Selected Color: </label> */}
+              <InputField
                 className={styles.objectForm__input}
+                labelTitle="Selected Color"
                 type="text"
                 name="selectedColor"
                 placeholder="Input Selected Color"
@@ -101,9 +105,10 @@ const CreateObjectForm = () => {
             <legend>Set Quantity: </legend>
             <div className={styles.objectForm__inputFieldDouble}>
               <div className={styles.objectForm__inputField}>
-                <label htmlFor="squareMeters">Square Meters: </label>
-                <input
+                {/* <label htmlFor="squareMeters">Square Meters: </label> */}
+                <InputField
                   className={styles.objectForm__input}
+                  labelTitle="Square Meters"
                   type="text"
                   name="squareMeters"
                   placeholder="Input Square Meters"
@@ -111,9 +116,10 @@ const CreateObjectForm = () => {
                 />
               </div>
               <div className={styles.objectForm__inputField}>
-                <label htmlFor="linearMeters">Linear Meters: </label>
-                <input
+                {/* <label htmlFor="linearMeters">Linear Meters: </label> */}
+                <InputField
                   className={styles.objectForm__input}
+                  labelTitle="Linear Meters"
                   type="text"
                   name="linearMeters"
                   placeholder="Input Linear Meters"
@@ -128,9 +134,10 @@ const CreateObjectForm = () => {
             onClick={onClickHandler}
           />
         </fieldset>
-        <label htmlFor="deadline">Deadline: </label>
-        <input
+        {/* <label htmlFor="deadline">Deadline: </label> */}
+        <InputField
           className={styles.objectForm__input}
+          labelTitle="Deadline"
           type="text"
           name="deadline"
           placeholder="Input Deadline"
