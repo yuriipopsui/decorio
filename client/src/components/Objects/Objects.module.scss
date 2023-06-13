@@ -1,0 +1,31 @@
+.table {
+  width: 95%;
+  margin: 20px auto;
+
+  &__headRow{
+    background-color: #2563a4;
+    border-radius: 3px;
+    margin-bottom: 50px;
+  }
+  &__headRow td {
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+  &__dataRow td{
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &__dataRow:nth-child(2n+1){
+    background-color: #fff;
+    color: #2563a4;
+    
+  }
+  &__dataRow:nth-child(2n){
+    // background-color: #fff;
+    color: #2563a4;
+  }
+}

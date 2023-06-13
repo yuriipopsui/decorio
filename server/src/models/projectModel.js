@@ -1,13 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const projectSchema = new mongoose.Schema({
   name: String,
   description: String,
+  customer: {
+    name: String,
+    phone: String,
+  },
   date: String,
   costTotal: Number,
   costMaterials: Number,
   salary: Number,
   costTools: Number,
+  offer: Boolean,
+  inWork: Boolean,
+  done: Boolean,
   works: [
     {
       name: String,
@@ -21,7 +28,7 @@ const projectSchema = new mongoose.Schema({
       salary: Number,
     },
   ],
-  materials:[
+  materials: [
     {
       name: String,
       quantity: Number,
@@ -41,6 +48,6 @@ const projectSchema = new mongoose.Schema({
   ],
 });
 
-const Project = mongoose.model('Project', projectSchema);
+const Project = mongoose.model("Project", projectSchema);
 
 module.exports = Project;
