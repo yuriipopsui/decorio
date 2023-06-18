@@ -7,7 +7,7 @@ export const createProject = createAsyncThunk(
   'project/createProject',
   async (newObject) => {
     try {
-      const res = await axios.post('project', newObject.newObject)
+      const res = await axios.post('project', newObject)
       .then(res => res.data);
       return res;
     }
@@ -34,7 +34,7 @@ const createProjectSlice = createSlice({
       state.isLoading = true;
       console.log(state.status);
     })
-    .addCase(createProject.fullfilled, (state, action) => {
+    .addCase(createProject.fulfilled, (state, action) => {
       state.status = "Success";
       state.project = action.payload;
       console.log(state.project);

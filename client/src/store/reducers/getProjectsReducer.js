@@ -8,7 +8,7 @@ export const getProjects = createAsyncThunk(
    async () => {
     try {
       const res = await axios.get('projects');
-      console.log(res.data);
+      // console.log(res.data);
       return res.data;
     } catch (err) {
       throw new Error(err.message);
@@ -32,7 +32,7 @@ const getProjectsSlice = createSlice({
     .addCase(getProjects.pending, (state) => {
       state.status = 'loading';
       state.isLoading = true;
-      console.log(state.status);
+      // console.log(state.status);
     })
     .addCase(getProjects.fulfilled, (state, action) => {
       state.status = 'Succeeded';
@@ -40,7 +40,7 @@ const getProjectsSlice = createSlice({
       console.log(state.projects);
       state.isLoading = false;
       state.error = null;
-      console.log(state.status);
+      // console.log(state.status);
     })
     .addCase(getProjects.rejected, (state, action) => {
       state.status = 'Rejected & Failed';

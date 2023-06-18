@@ -33,7 +33,7 @@ const Objects = () => {
             <td className={styles.table__head}>Decor</td>
             <td className={styles.table__head}>Customer Name</td>
             <td className={styles.table__head}>Customer Phone</td>
-            <td className={styles.table__head}>State</td>
+            <td className={styles.table__head}>Status</td>
           </tr>
         </thead>
         <tbody>
@@ -45,10 +45,10 @@ const Objects = () => {
                     {project.date}
                   </td>
                   <td className={styles.table__data} onClick={onClickHandler}>
-                    {project.name}
+                    {project.address}
                   </td>
                   <td className={styles.table__data} onClick={onClickHandler}>
-                    {project.description}
+                    {project.decor.name}
                   </td>
                   <td className={styles.table__data} onClick={onClickHandler}>
                     {project.customer.name}

@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 
 
 const InputField = ({
-  // className: className,
   labelTitle,
   type,
   name,
   placeholder,
-  onChangeHandler,
+  value,
+  onChange
 }) => {
+
   return (
     <div className={styles.objectForm__inputField}>
       {
@@ -20,7 +21,8 @@ const InputField = ({
         type={type}
         name={name}
         placeholder={placeholder}
-        onChange={onChangeHandler}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
@@ -32,6 +34,7 @@ InputField.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  onChangeHandler: PropTypes.func
+  value: PropTypes.string,
+  onChange: PropTypes.func
 }
 export default InputField;

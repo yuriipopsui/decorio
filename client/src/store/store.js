@@ -10,6 +10,6 @@ const store = configureStore({
   reducer: rootReducer,
 });
 
-console.log(store.getState());
+// console.log(store.getState());
 
 export default store;
