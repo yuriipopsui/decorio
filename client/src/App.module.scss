@@ -14,17 +14,19 @@
 
 .container {
   max-width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
   column-gap: 1vw;
 }
 .content{
+  display: flex;
+  justify-content: center;
   max-width: 100vw;
-  min-height: 90vh;
+  // min-height: 100vh;
   margin: 3vh 1vw 3vh 0;
   padding: 10px;
-  background-color: #bfc6ec;
+  background-color: #021168;
   border-radius: 5px;
   text-align: center;
 

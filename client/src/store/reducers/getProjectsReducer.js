@@ -32,15 +32,15 @@ const getProjectsSlice = createSlice({
     .addCase(getProjects.pending, (state) => {
       state.status = 'loading';
       state.isLoading = true;
-      // console.log(state.status);
+      console.log(state.status);
     })
     .addCase(getProjects.fulfilled, (state, action) => {
-      state.status = 'Succeeded';
+      state.status = 'Success';
       state.projects = action.payload;
-      console.log(state.projects);
+      // console.log(state.projects);
       state.isLoading = false;
       state.error = null;
-      // console.log(state.status);
+      console.log(state.status);
     })
     .addCase(getProjects.rejected, (state, action) => {
       state.status = 'Rejected & Failed';

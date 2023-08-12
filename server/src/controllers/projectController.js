@@ -5,6 +5,7 @@ exports.getAllProjects = async (req, res, next) => {
 }
 
 exports.getProjectById = async (req, res, next) => {
+  console.log(req.params.id);
   res.json(await project.findById(req.params.id));
 };
 

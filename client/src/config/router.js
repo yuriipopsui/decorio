@@ -8,14 +8,20 @@ const routes = [
     isPublicOnly: false
   },
   {
-    path: 'objects',
+    path: 'projects',
     Component: lazy(() => import('../components/Objects/Objects')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false
   },
   {
-    path: 'objects/create_object',
-    Component: lazy(() => import('../components/CreateObject/CreateObject')),
+    path: 'projects/create_project',
+    Component: lazy(() => import('../components/CreateProject/CreateProject')),
+    isPrivate: false, // Temporary false, but with Authentication should be true
+    isPublicOnly: false
+  },
+  {
+    path: 'projects/:projectId',
+    Component: lazy(() => import('../components/ProjectCard/ProjectCard')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false
   },
