@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import styles from "./CreateObjectForm.module.scss";
+import {useNavigate} from "react-router-dom";
+import styles from "./CreateProjectForm.module.scss";
 // import { useForm } from "react-hook-form";
 // import * as Yup from "yup";
 // import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,9 +9,10 @@ import Button from "../Button/Button";
 import InputField from "../InputField/InputField";
 import { createProject } from "../../../store/reducers/createProjectReducer";
 
-const CreateObjectForm = () => {
+const CreateProjectForm = () => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [newObject, setNewObject] = useState({
     date: '',
     address: '',
@@ -25,8 +27,8 @@ const CreateObjectForm = () => {
       description: ''
     },
     measure: {
-      square: null,
-      linear: null
+      square: '',
+      linear: ''
     }
   });
 
@@ -77,6 +79,25 @@ const CreateObjectForm = () => {
     event.preventDefault();
     console.log(newObject);
     dispatch(createProject(newObject));
+    setNewObject({
+      date: '',
+      address: '',
+      customer: {
+        name: '',
+        phone: '',
+        info: ''
+      },
+      decor: {
+        name: '',
+        color: '',
+        description: ''
+      },
+      measure: {
+        square: '',
+        linear: ''
+      }
+    });
+    return navigate(`/projects`);
   };
 
   return (
@@ -223,4 +244,4 @@ const CreateObjectForm = () => {
   );
 };
 
-export default CreateObjectForm;
+export default CreateProjectForm;

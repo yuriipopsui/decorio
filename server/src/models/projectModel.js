@@ -11,7 +11,10 @@ const projectSchema = new mongoose.Schema({
   decor: {
     name: String,
     color: String,
-    description: String
+    description: {
+      type: String,
+      required: false
+    }
   },
   measure: {
     square: Number,
