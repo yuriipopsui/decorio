@@ -21,15 +21,15 @@
     margin-bottom: 30px;
     border: 1px solid black;
     border-radius: 15px;
-    font-size: 18px;
-      line-height: 22px;
+    font-size: 16px;
+      line-height: 20px;
       color:indigo;
       font-style: italic;
       font-weight: 700;
 
     &_title {
       position: absolute;
-      width: 50%;
+      width: 40%;
       height: 25px;
       top: 0;
       left: 50%;
@@ -40,7 +40,7 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
      
     &_decor,
@@ -51,11 +51,8 @@
       text-align: left;
 
       & p {
-        margin: 0 0 15px 20px;
+        margin: 0 0 8px 20px;
       }
     }
-   
-
-
   }
 }

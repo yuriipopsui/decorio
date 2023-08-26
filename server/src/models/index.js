@@ -1,3 +1,4 @@
 module.exports = {
-  project: require("./projectModel")
+  project: require("./projectModel"),
+  service: require("./serviceModel"),
 }
