@@ -12,6 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import getProjectsSlice from "./reducers/getProjectsReducer";
 import getProjectbyIdSlice from "./reducers/getProjectReducer";
+import getServicesSlice from "./reducers/getServiceReducer";
 
 const persistConfig = {
   key: "root",
@@ -22,6 +23,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   projects: getProjectsSlice,
   project: getProjectbyIdSlice,
+  services: getServicesSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
